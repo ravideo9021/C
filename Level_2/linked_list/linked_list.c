@@ -65,6 +65,8 @@ int main()
 void addAtFirst(){
     struct node *temp;
     temp = (struct node*) malloc(sizeof(struct node));
+    temp->link = NULL;
+
     printf("Enter a Value: ");
     scanf("%d", &temp->data);
 
@@ -75,6 +77,7 @@ void addAtFirst(){
 void addAtEnd(){
     struct node *temp;
     temp = (struct node*) malloc(sizeof(struct node));
+    temp->link = NULL;
     
     printf("Enter a Value: ");
     scanf("%d", &temp->data);
@@ -103,6 +106,7 @@ void addAt(){
 
     struct node *temp;
     temp = (struct node *) malloc(sizeof(struct node));
+    temp->link = NULL;
 
     printf("Enter a value: ");
     scanf("%d", &temp->data);

@@ -1,0 +1,15 @@
+---
+triple:          'arm64-apple-darwin'
+binary-path:     '/Users/ravidev9021/Documents/C/Level_2/linked_list/linkedList2'
+relocations:
+  - { offsetInCU: 0x26, offset: 0x26, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003728, symSize: 0xFC }
+  - { offsetInCU: 0x3F, offset: 0x3F, size: 0x8, addend: 0x0, symName: _root, symObjAddr: 0x1598, symBinAddr: 0x100008000, symSize: 0x0 }
+  - { offsetInCU: 0x83, offset: 0x83, size: 0x8, addend: 0x0, symName: _main, symObjAddr: 0x0, symBinAddr: 0x100003728, symSize: 0xFC }
+  - { offsetInCU: 0xAB, offset: 0xAB, size: 0x8, addend: 0x0, symName: _append, symObjAddr: 0x11C, symBinAddr: 0x100003844, symSize: 0xB8 }
+  - { offsetInCU: 0xDD, offset: 0xDD, size: 0x8, addend: 0x0, symName: _addNode, symObjAddr: 0x1D4, symBinAddr: 0x1000038FC, symSize: 0x1F0 }
+  - { offsetInCU: 0x147, offset: 0x147, size: 0x8, addend: 0x0, symName: _addNodeAtFirst, symObjAddr: 0x3C4, symBinAddr: 0x100003AEC, symSize: 0x8C }
+  - { offsetInCU: 0x16B, offset: 0x16B, size: 0x8, addend: 0x0, symName: _length, symObjAddr: 0x450, symBinAddr: 0x100003B78, symSize: 0x54 }
+  - { offsetInCU: 0x1A1, offset: 0x1A1, size: 0x8, addend: 0x0, symName: _display, symObjAddr: 0x4A4, symBinAddr: 0x100003BCC, symSize: 0x8C }
+  - { offsetInCU: 0x1D3, offset: 0x1D3, size: 0x8, addend: 0x0, symName: _delete, symObjAddr: 0x530, symBinAddr: 0x100003C58, symSize: 0x124 }
+  - { offsetInCU: 0x23D, offset: 0x23D, size: 0x8, addend: 0x0, symName: _reverse, symObjAddr: 0x654, symBinAddr: 0x100003D7C, symSize: 0x84 }
+...
