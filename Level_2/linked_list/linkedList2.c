@@ -93,6 +93,7 @@ void addNode(){
     scanf("%d", &temp->data);
 
     int n;
+    
     printf("\nAdd node at postion: ");
     scanf("%d", &n);
 
