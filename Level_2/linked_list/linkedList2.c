@@ -129,7 +129,7 @@ void addNode(){
     p = root;
 
     int i = 1;
-    while(i < n){
+    while(i < n-1){
         p = p->link;
         i++;
     }

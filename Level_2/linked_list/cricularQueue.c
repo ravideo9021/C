@@ -19,7 +19,7 @@ int main(){
         scanf("%d", &choice);
 
         switch(choice){
-            case 1: 
+            case 1:
                 enqueue();
                 break;
             case 2:
@@ -39,43 +39,16 @@ return 0;
 
 void enqueue(){
     int element;
-    printf("Enter a Value: ");
+    pritnf("Enter a Value: ");
     scanf("%d", &element);
 
     if (f == l && l == -1){
-        f = l = 0;
-        queue[f] = element;
-        return;
-    }
-    if (l == size-1){
-        printf("overflow/size is full");
-        return;
-    }
-
-    l += 1;
-    queue[l] = element;
-}
-
-
-void dequeue(){
-    if(f == l && l == -1){
-        printf("Underflow/queue is empty");
-        return;
-    }
-
-    if(f == l){
-        f = l = -1;
-        return;
-    }
-
-    f += 1;
-}
-
-
-void display(){
-    int j = 1;
-    for (int i = f; i <= l; i++){
-        printf("Data %d: %d\n", j, queue[i]);
-        j++;
+        f = l = element;
     }
 }
+
+
+void dequeue(){}
+
+
+void display(){}

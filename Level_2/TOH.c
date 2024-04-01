@@ -3,7 +3,7 @@ void TOH(int n, char A, char B, char C);
 
 
 int main(){
-    int n = 4;
+    int n = 3;
     TOH(n, 'A', 'B' ,'C');
 }
 

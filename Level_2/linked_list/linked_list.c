@@ -9,45 +9,35 @@ struct node
 
 struct node *root = NULL;
 
-void addAtFirst();
-void addAtEnd();
-void addAt();
+void AddNode();
 void display();
 int length();
 void delete();
 
 int main()
 {
-    printf("\n1. Add at 1st\n2. Add at end\n3. Add At nth place\n");
-    printf("4. length\n5. Display all Data\n6. Delete\n0. Exit\n");
+    printf("1. Add Node\n");
+    printf("2. length\n3. Display all Data\n4. Delete\n0. Exit\n");
 
     while(1){
         int choice;
-        printf("\nPress(0-5): ");
+        printf("\nPress(0-4): ");
         scanf("%d", &choice);
         
         switch(choice){
             case 1:
-                addAtFirst();
+                AddNode();
                 break;
-                
+
             case 2:
-                addAtEnd();
-                break;
-            
-            case 3:
-                addAt();
-                break;
-            
-            case 4:
                 printf("length = %d\n", length());
                 break;
                 
-            case 5:
+            case 3:
                 display();
                 break;
                 
-            case 6:
+            case 4:
                 delete();
                 break;
 
@@ -62,81 +52,29 @@ int main()
     return 0;
 }
 
-void addAtFirst(){
-    struct node *temp;
-    temp = (struct node*) malloc(sizeof(struct node));
-    temp->link = NULL;
 
-    printf("Enter a Value: ");
-    scanf("%d", &temp->data);
-
-    temp->link = root;
-    root = temp;
-}
-
-void addAtEnd(){
-    struct node *temp;
-    temp = (struct node*) malloc(sizeof(struct node));
-    temp->link = NULL;
-    
-    printf("Enter a Value: ");
-    scanf("%d", &temp->data);
-    
-    if (root == NULL)
-    {
-        root = temp;
-        return;
-    }
-
-    struct node *p;
-    p = root;
-        
-    while (p->link != NULL)
-    {
-        p = p->link;
-    }
-        
-    p->link = temp;
-}
-
-void addAt(){
+void AddNode(){
     int n;
     printf("Add node at: ");
     scanf("%d", &n);
 
     struct node *temp;
-    temp = (struct node *) malloc(sizeof(struct node));
-    temp->link = NULL;
-
-    printf("Enter a value: ");
+    temp = (struct node*) malloc(sizeof(struct node));
+    printf("Enter the data: ");
     scanf("%d", &temp->data);
+    temp->link = NULL; 
 
-    struct node *p;
-    struct node *q;
-    
-    if (n == 1){
-        temp->link = root;
+    if (root == NULL){
         root = temp;
         return;
     }
-
-    p = root;
-    if (n == length()+1){
-        while (p->link != NULL)
-    {
-        p = p->link;
+    if (n == 1){
+        temp->link = root;
+        root = temp;
     }
+    else{
         
-    p->link = temp;
-    return;
     }
-
-    for (int i = 1; i < n; i++){
-        q = p;
-        p = p->link;
-    }
-    temp->link = q->link;
-    q->link = temp;
 }
 
 void display()
